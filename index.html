@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <title>A Service Guincho | Guincho 24 horas e transporte de veículos</title>
+  <meta name="description" content="Guincho 24 horas, transporte de veículos e atendimento rápido em Curitiba e região. Chame no WhatsApp ou ligue: (41) 98835-5326.">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="A Service Guincho">
+  <meta property="og:title" content="A Service Guincho | Assistência 24 horas">
+  <meta property="og:description" content="Guincho rápido, transporte de veículos e atendimento 24 horas. Chame no WhatsApp: (41) 98835-5326.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" as="image" href="assets/img/frota-1000.webp" imagesrcset="assets/img/frota-600.webp 600w, assets/img/frota-1000.webp 1000w" imagesizes="(min-width: 960px) 540px, 100vw" fetchpriority="high">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "A Service Guincho",
+    "description": "Guincho 24 horas e transporte de veículos em Curitiba e região.",
+    "telephone": "+55-41-98835-5326",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São José dos Pinhais",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "areaServed": "Curitiba e Região Metropolitana",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": ["https://www.instagram.com/allonsimioni/"]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================
+       Tokens
+       ========================================================== */
+    :root {
+      --red: #c8102e;
+      --red-dark: #9e0c23;
+      --red-bright: #ef2b3f;
+      --black: #0f0f0f;
+      --black-2: #1a1a1a;
+      --ink: #151515;
+      --muted: #5a5a5a;
+      --line: #e6e6e6;
+      --soft: #f4f4f4;
+      --white: #ffffff;
+      --green: #20b858;
+      --green-dark: #189c4a;
+
+      --radius: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+      --nav-h: 64px;
+      --gutter: max(20px, env(safe-area-inset-left, 0px));
+
+      --font: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --font-display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    }
+
+    /* ==========================================================
+       Base
+       ========================================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + 12px);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--red-bright);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .icon {
+      width: 1.25em;
+      height: 1.25em;
+      flex-shrink: 0;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    /* ==========================================================
+       Layout helpers
+       ========================================================== */
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    .section {
+      padding-block: 72px;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 4px 12px;
+      border: 1.5px solid currentColor;
+      border-radius: 4px;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+
+    .title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 7vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+    }
+
+    .lead {
+      max-width: 560px;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .section-head .lead {
+      margin-inline: auto;
+    }
+
+    /* ==========================================================
+       Buttons
+       ========================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 24px;
+      border: 2px solid transparent;
+      border-radius: var(--radius);
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn .icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn--wa {
+      background: var(--green);
+      color: var(--white);
+      box-shadow: 0 6px 18px rgba(32, 184, 88, 0.3);
+    }
+
+    .btn--red {
+      background: var(--red);
+      color: var(--white);
+      box-shadow: 0 6px 18px rgba(200, 16, 46, 0.3);
+    }
+
+    .btn--white {
+      background: var(--white);
+      color: var(--red);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    .btn--ghost {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.38);
+    }
+
+    .btn--sm {
+      min-height: 44px;
+      padding: 0 18px;
+      font-size: 0.95rem;
+    }
+
+    .btn--sm .icon {
+      width: 19px;
+      height: 19px;
+    }
+
+    @media (hover: hover) {
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn--wa:hover {
+        background: var(--green-dark);
+      }
+
+      .btn--red:hover {
+        background: var(--red-dark);
+      }
+
+      .btn--white:hover {
+        background: #f3f3f3;
+      }
+
+      .btn--ghost:hover {
+        border-color: var(--white);
+        background: rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    /* ==========================================================
+       Header / navigation
+       ========================================================== */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      padding-top: env(safe-area-inset-top, 0px);
+      background: rgba(15, 15, 15, 0.94);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid rgba(200, 16, 46, 0.25);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      height: var(--nav-h);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+    }
+
+    .brand img {
+      width: 48px;
+      height: auto;
+    }
+
+    .brand__name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .brand__name small {
+      display: block;
+      margin-top: 4px;
+      font-family: var(--font);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav__menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      padding: 4px var(--gutter) 16px;
+      background: var(--black);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav__menu.is-open {
+      display: flex;
+    }
+
+    .nav__menu a {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .nav__menu a:last-child {
+      border-bottom: 0;
+    }
+
+    .nav__actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav__cta {
+      display: none;
+    }
+
+    .nav__toggle {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      color: var(--white);
+    }
+
+    .nav__toggle .icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    .nav__toggle .icon-close,
+    .nav__toggle[aria-expanded="true"] .icon-menu {
+      display: none;
+    }
+
+    .nav__toggle[aria-expanded="true"] .icon-close {
+      display: block;
+    }
+
+    /* ==========================================================
+       Hero
+       ========================================================== */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + 36px) 0 56px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(60% 50% at 80% 45%, rgba(200, 16, 46, 0.18), transparent 70%),
+        radial-gradient(40% 40% at 0% 100%, rgba(200, 16, 46, 0.08), transparent 70%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 56px 56px;
+      -webkit-mask-image: radial-gradient(ellipse at 70% 40%, #000 25%, transparent 75%);
+      mask-image: radial-gradient(ellipse at 70% 40%, #000 25%, transparent 75%);
+    }
+
+    .hero__grid {
+      display: grid;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 6px 14px 6px 10px;
+      border: 1px solid rgba(200, 16, 46, 0.4);
+      border-radius: 999px;
+      background: rgba(200, 16, 46, 0.14);
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .status__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #25d366;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      50% { box-shadow: 0 0 0 6px rgba(37, 211, 102, 0); }
+    }
+
+    .hero__title {
+      margin-bottom: 18px;
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 10vw, 4rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+
+    .hero__title span {
+      color: var(--red-bright);
+    }
+
+    .hero__lead {
+      max-width: 470px;
+      margin-bottom: 28px;
+      font-size: 1.08rem;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .hero__actions {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .taxi {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 480px;
+      margin-bottom: 28px;
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-left: 3px solid var(--red);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .taxi strong {
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    .taxi__icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(200, 16, 46, 0.16);
+      color: var(--red-bright);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 420px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stats li {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stats strong {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stats span {
+      margin-top: 4px;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero__media {
+      display: grid;
+      gap: 14px;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      background: var(--black-2);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo--main {
+      aspect-ratio: 4 / 3;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .photo--thumb {
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .hero__thumbs {
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .hero__tag {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: var(--radius);
+      background: var(--red);
+      color: var(--white);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero__tag strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      line-height: 1.1;
+    }
+
+    .hero__tag small {
+      font-size: 0.72rem;
+      opacity: 0.8;
+    }
+
+    /* Hero entrance (single, subtle) */
+    .js .hero__content,
+    .js .hero__media {
+      animation: rise 0.7s ease both;
+    }
+
+    .js .hero__media {
+      animation-delay: 0.12s;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    /* ==========================================================
+       Why us
+       ========================================================== */
+    .why {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .why::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(60% 60% at 90% 50%, rgba(200, 16, 46, 0.1), transparent 65%);
+    }
+
+    .why .eyebrow {
+      color: var(--red-bright);
+    }
+
+    .why .lead {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .why__grid {
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .features {
+      display: grid;
+      gap: 22px;
+      margin-top: 32px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .feature__icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(200, 16, 46, 0.3);
+      border-radius: 10px;
+      background: rgba(200, 16, 46, 0.12);
+      color: var(--red-bright);
+    }
+
+    .feature h3 {
+      margin-bottom: 2px;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .feature p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .why__media {
+      display: grid;
+      gap: 14px;
+    }
+
+    .why__thumbs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    /* ==========================================================
+       Gallery (swipe on mobile, grid on desktop)
+       ========================================================== */
+    .gallery__track {
+      display: flex;
+      gap: 12px;
+      margin-inline: calc(var(--gutter) * -1);
+      padding: 4px var(--gutter) 8px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: var(--gutter);
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery__track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery__item {
+      position: relative;
+      flex: 0 0 80%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      background: var(--soft);
+      scroll-snap-align: start;
+    }
+
+    .gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery__item figcaption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 48px 16px 14px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--white);
+    }
+
+    .gallery__hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .gallery__hint .icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ==========================================================
+       Testimonials
+       ========================================================== */
+    .testimonials {
+      background: var(--soft);
+    }
+
+    .testimonials__grid {
+      display: grid;
+      gap: 18px;
+      max-width: 640px;
+      margin-inline: auto;
+    }
+
+    .quote {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 26px 24px 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quote::before {
+      content: "\201C";
+      position: absolute;
+      top: 8px;
+      right: 22px;
+      font-family: Georgia, serif;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: rgba(200, 16, 46, 0.12);
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 14px;
+      color: #f5a623;
+    }
+
+    .stars svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .quote blockquote {
+      flex: 1;
+      margin-bottom: 20px;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #4a4a4a;
+    }
+
+    .quote figcaption {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red), var(--red-dark));
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .quote cite {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .quote small {
+      font-size: 0.82rem;
+      color: #888;
+    }
+
+    /* ==========================================================
+       Final call to action
+       ========================================================== */
+    .cta {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--red);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(50% 80% at 15% 50%, rgba(0, 0, 0, 0.18), transparent 60%),
+        radial-gradient(40% 60% at 85% 25%, rgba(255, 255, 255, 0.07), transparent 55%);
+    }
+
+    .cta .eyebrow {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .cta .title {
+      font-size: clamp(2.2rem, 8vw, 3.4rem);
+    }
+
+    .cta .lead {
+      margin: 0 auto 32px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .cta__actions {
+      display: grid;
+      gap: 12px;
+      max-width: 420px;
+      margin: 0 auto 32px;
+    }
+
+    .cta .btn--ghost {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .cta__phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .cta__phone .icon {
+      width: 24px;
+      height: 24px;
+      opacity: 0.8;
+    }
+
+    .cta__note {
+      margin-top: 6px;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ==========================================================
+       Footer
+       ========================================================== */
+    .footer {
+      /* espaço extra no celular para a barra fixa de contato */
+      padding: 56px 0 calc(28px + 76px + env(safe-area-inset-bottom, 0px));
+      background: var(--black);
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer__grid {
+      display: grid;
+      gap: 36px;
+      margin-bottom: 36px;
+    }
+
+    .footer__desc {
+      max-width: 300px;
+      margin-top: 16px;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .socials a {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.8);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .socials a:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .footer__title {
+      margin-bottom: 16px;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    .footer__list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .footer__list a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.2s ease;
+    }
+
+    .footer__list a:hover {
+      color: var(--white);
+    }
+
+    .footer__list .icon {
+      width: 18px;
+      height: 18px;
+      color: var(--red-bright);
+    }
+
+    .footer__bottom {
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.84rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-align: center;
+    }
+
+    /* ==========================================================
+       Contact shortcuts: bottom bar (mobile) and floating button (desktop)
+       ========================================================== */
+    .mobile-bar {
+      position: fixed;
+      inset: auto 0 0 0;
+      z-index: 60;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom, 0px));
+      background: rgba(15, 15, 15, 0.96);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-bar.is-hidden {
+      transform: translateY(110%);
+    }
+
+    .mobile-bar .btn {
+      min-height: 52px;
+      padding: 0 12px;
+      font-size: 1.02rem;
+      box-shadow: none;
+    }
+
+    .wa-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 60;
+      display: none;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .wa-float__label {
+      padding: 10px 16px;
+      border-radius: 22px 22px 4px 22px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      font-family: var(--font-display);
+      font-size: 0.98rem;
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--ink);
+      opacity: 0;
+      transform: translateX(8px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      pointer-events: none;
+    }
+
+    .wa-float:hover .wa-float__label,
+    .wa-float:focus-visible .wa-float__label {
+      opacity: 1;
+      transform: none;
+    }
+
+    .wa-float__btn {
+      display: grid;
+      place-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25d366;
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      transition: transform 0.2s ease;
+    }
+
+    .wa-float__btn .icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .wa-float:hover .wa-float__btn {
+      transform: scale(1.08);
+    }
+
+    /* ==========================================================
+       Scroll reveal (only when JS is on)
+       ========================================================== */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .js .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ==========================================================
+       Breakpoints
+       ========================================================== */
+    @media (min-width: 600px) {
+      :root {
+        --gutter: max(24px, env(safe-area-inset-left, 0px));
+      }
+
+      .hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .hero__thumbs {
+        display: grid;
+      }
+
+      .stats {
+        justify-content: flex-start;
+        gap: 36px;
+      }
+
+      .stats strong {
+        font-size: 1.9rem;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+        gap: 26px 28px;
+      }
+
+      .gallery__item {
+        flex-basis: 46%;
+      }
+
+      .cta__actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: none;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .footer {
+        padding-bottom: 28px;
+      }
+
+      .section {
+        padding-block: 96px;
+      }
+
+      .section-head {
+        margin-bottom: 52px;
+      }
+
+      .nav__cta {
+        display: inline-flex;
+      }
+
+      .mobile-bar {
+        display: none;
+      }
+
+      .wa-float {
+        display: flex;
+      }
+
+      .gallery__track {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(2, 270px);
+        gap: 16px;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+      }
+
+      .gallery__item {
+        aspect-ratio: auto;
+      }
+
+      .gallery__item--big {
+        grid-row: span 2;
+      }
+
+      .gallery__item:hover img {
+        transform: scale(1.05);
+      }
+
+      .gallery__hint {
+        display: none;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 48px;
+      }
+
+      .footer__bottom {
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .nav__toggle {
+        display: none;
+      }
+
+      .nav__menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+        padding: 0;
+        background: none;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .nav__menu a {
+        padding: 0;
+        border: 0;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.72);
+        transition: color 0.2s ease;
+      }
+
+      .nav__menu a:hover {
+        color: var(--white);
+      }
+
+      .hero {
+        padding: calc(var(--nav-h) + 72px) 0 88px;
+      }
+
+      .hero__grid {
+        grid-template-columns: 1.05fr 1fr;
+        gap: 56px;
+      }
+
+      .why__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+      }
+
+      .testimonials__grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: none;
+        gap: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .js .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Ícones (SVG inline: sem dependência externa) -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </symbol>
+    <symbol id="i-award" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="6"/>
+      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <polyline points="12 6 12 12 16 14"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <polyline points="9 12 11 14 15 10"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+      <line x1="7" y1="7" x2="7.01" y2="7"/>
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </symbol>
+    <symbol id="i-swipe" viewBox="0 0 24 24">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+      <polyline points="12 5 19 12 12 19"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <polygon fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </symbol>
+    <symbol id="i-star-half" viewBox="0 0 24 24">
+      <polygon fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      <polygon fill="currentColor" stroke="none" points="12 2 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/>
+    </symbol>
+  </svg>
+
+  <!-- ======================= Cabeçalho ======================= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="brand" aria-label="A Service Guincho, voltar ao início">
+        <img src="assets/img/logo.webp" alt="" width="200" height="167">
+        <span class="brand__name">
+          A Service
+          <small>Guincho &amp; Assistência 24h</small>
+        </span>
+      </a>
+
+      <nav class="nav__menu" id="menu" aria-label="Menu principal">
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="https://wa.me/5541988355326?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20atendimento." class="btn btn--wa btn--sm nav__cta" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          Chamar agora
+        </a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= Hero ======================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="status">
+            <span class="status__dot" aria-hidden="true"></span>
+            Atendimento disponível agora
+          </p>
+
+          <h1 class="hero__title">
+            Guincho rápido<br>
+            e assistência<br>
+            <span>24 horas.</span>
+          </h1>
+
+          <p class="hero__lead">
+            Equipe especializada, atendimento ágil e suporte completo para o seu veículo onde você estiver.
+          </p>
+
+          <div class="hero__actions">
+            <a href="https://wa.me/5541988355326?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20atendimento." class="btn btn--wa" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Solicitar atendimento
+            </a>
+            <a href="tel:+5541988355326" class="btn btn--red">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              Ligar agora
+            </a>
+            <a href="https://www.instagram.com/allonsimioni/" class="btn btn--ghost" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+              Acompanhe no Instagram
+            </a>
+          </div>
+
+          <div class="taxi">
+            <span class="taxi__icon" aria-hidden="true">
+              <svg class="icon"><use href="#i-users"/></svg>
+            </span>
+            <p>Possuímos caminhão com <strong>táxi incluso</strong>, com lugar para até <strong>6 passageiros</strong>.</p>
+          </div>
+
+          <ul class="stats">
+            <li><strong>24h</strong><span>Disponível</span></li>
+            <li><strong>+500</strong><span>Atendimentos</span></li>
+            <li><strong>30min</strong><span>Tempo médio</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <figure class="photo photo--main">
+            <img
+              src="assets/img/frota-1000.webp"
+              srcset="assets/img/frota-600.webp 600w, assets/img/frota-1000.webp 1000w"
+              sizes="(min-width: 960px) 540px, 100vw"
+              width="1000" height="1333"
+              alt="Dois caminhões guincho da A Service estacionados ao entardecer"
+              style="object-position: center 70%"
+              fetchpriority="high">
+            <figcaption class="hero__tag">
+              <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+              <span>
+                <strong>Transporte seguro</strong>
+                <small>Veículo protegido</small>
+              </span>
+            </figcaption>
+          </figure>
+
+          <div class="hero__thumbs">
+            <div class="photo photo--thumb">
+              <img
+                src="assets/img/iveco-suv-600.webp"
+                width="600" height="800"
+                alt="Guincho plataforma transportando um SUV branco"
+                style="object-position: center 62%"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="photo photo--thumb">
+              <img
+                src="assets/img/iveco-condominio-600.webp"
+                width="600" height="800"
+                alt="Guincho com carro prata na plataforma em condomínio"
+                style="object-position: center 62%"
+                loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Diferenciais ======================= -->
+    <section class="section why" id="diferenciais" aria-labelledby="why-title">
+      <div class="container why__grid">
+        <div>
+          <span class="eyebrow">Por que nos escolher</span>
+          <h2 class="title" id="why-title">A Service que cuida do seu veículo como se fosse nosso.</h2>
+          <p class="lead">Trabalhamos com comprometimento, agilidade e transparência em cada atendimento.</p>
+
+          <ul class="features">
+            <li class="feature">
+              <span class="feature__icon" aria-hidden="true"><svg class="icon"><use href="#i-zap"/></svg></span>
+              <div>
+                <h3>Atendimento rápido</h3>
+                <p>Tempo de resposta ágil para não te deixar esperando.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__icon" aria-hidden="true"><svg class="icon"><use href="#i-award"/></svg></span>
+              <div>
+                <h3>Equipe especializada</h3>
+                <p>Profissionais treinados e capacitados para cada situação.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__icon" aria-hidden="true"><svg class="icon"><use href="#i-clock"/></svg></span>
+              <div>
+                <h3>Disponível 24 horas</h3>
+                <p>Não importa o horário, estamos prontos para atender.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__icon" aria-hidden="true"><svg class="icon"><use href="#i-shield"/></svg></span>
+              <div>
+                <h3>Segurança no transporte</h3>
+                <p>Equipamentos adequados para proteger seu veículo.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__icon" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <div>
+                <h3>Atendimento regional</h3>
+                <p>Cobrimos toda a região com eficiência e pontualidade.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__icon" aria-hidden="true"><svg class="icon"><use href="#i-tag"/></svg></span>
+              <div>
+                <h3>Preço justo</h3>
+                <p>Orçamento honesto e transparente, sem surpresas.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="why__media reveal">
+          <div class="photo photo--main">
+            <img
+              src="assets/img/hr-oficina-1000.webp"
+              srcset="assets/img/hr-oficina-600.webp 600w, assets/img/hr-oficina-1000.webp 1000w"
+              sizes="(min-width: 960px) 540px, 100vw"
+              width="1000" height="1333"
+              alt="Guincho A Service com giroflex aceso dentro de uma oficina"
+              style="object-position: center 60%"
+              loading="lazy" decoding="async">
+          </div>
+          <div class="why__thumbs">
+            <div class="photo photo--thumb">
+              <img
+                src="assets/img/hr-atendimento-600.webp"
+                width="600" height="800"
+                alt="Guincho A Service entregando uma van em centro automotivo"
+                style="object-position: center 65%"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="photo photo--thumb">
+              <img
+                src="assets/img/hr-sedan-600.webp"
+                width="600" height="800"
+                alt="Guincho A Service transportando um sedan preto"
+                style="object-position: center 62%"
+                loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Galeria ======================= -->
+    <section class="section gallery" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Galeria</span>
+          <h2 class="title" id="gallery-title">Nosso trabalho em ação</h2>
+          <p class="lead">Acompanhe nossos atendimentos e veja de perto a qualidade do serviço que prestamos.</p>
+        </div>
+
+        <div class="gallery__track reveal">
+          <figure class="gallery__item gallery__item--big">
+            <img
+              src="assets/img/hr-sedan-1000.webp"
+              srcset="assets/img/hr-sedan-600.webp 600w, assets/img/hr-sedan-1000.webp 1000w"
+              sizes="(min-width: 769px) 560px, 80vw"
+              width="1000" height="1333"
+              alt="Guincho A Service com sedan preto na plataforma"
+              style="object-position: center 60%"
+              loading="lazy" decoding="async">
+            <figcaption>Remoção com plataforma</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img
+              src="assets/img/iveco-suv-600.webp"
+              srcset="assets/img/iveco-suv-600.webp 600w, assets/img/iveco-suv-1000.webp 1000w"
+              sizes="(min-width: 769px) 270px, 80vw"
+              width="600" height="800"
+              alt="Guincho transportando SUV branco"
+              style="object-position: center 62%"
+              loading="lazy" decoding="async">
+            <figcaption>Transporte de SUV</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img
+              src="assets/img/iveco-condominio-600.webp"
+              srcset="assets/img/iveco-condominio-600.webp 600w, assets/img/iveco-condominio-1000.webp 1000w"
+              sizes="(min-width: 769px) 270px, 80vw"
+              width="600" height="800"
+              alt="Guincho com carro prata em condomínio"
+              style="object-position: center 62%"
+              loading="lazy" decoding="async">
+            <figcaption>Atendimento em condomínio</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img
+              src="assets/img/transporte-utilitario-600.webp"
+              srcset="assets/img/transporte-utilitario-600.webp 600w, assets/img/transporte-utilitario-1000.webp 900w"
+              sizes="(min-width: 769px) 270px, 80vw"
+              width="600" height="1067"
+              alt="Plataforma transportando um caminhão utilitário"
+              style="object-position: center 55%"
+              loading="lazy" decoding="async">
+            <figcaption>Transporte de utilitário</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img
+              src="assets/img/remocao-van-600.webp"
+              srcset="assets/img/remocao-van-600.webp 600w, assets/img/remocao-van-1000.webp 1000w"
+              sizes="(min-width: 769px) 270px, 80vw"
+              width="600" height="800"
+              alt="Van branca sendo transportada na plataforma"
+              style="object-position: center 55%"
+              loading="lazy" decoding="async">
+            <figcaption>Remoção de van</figcaption>
+          </figure>
+        </div>
+
+        <p class="gallery__hint">
+          Deslize para ver mais
+          <svg class="icon" aria-hidden="true"><use href="#i-swipe"/></svg>
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= Depoimentos ======================= -->
+    <section class="section testimonials" id="depoimentos" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Depoimentos</span>
+          <h2 class="title" id="testimonials-title">O que nossos clientes dizem sobre nós</h2>
+          <p class="lead">Veja a experiência de quem já utilizou nossos serviços.</p>
+        </div>
+
+        <div class="testimonials__grid reveal">
+          <figure class="quote">
+            <div class="stars" role="img" aria-label="Avaliação 5 de 5">
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>
+              Tive um furo de pneu numa estrada deserta à noite. A A Service chegou em menos de 40 minutos. Atendimento tranquilo, profissional e sem me deixar na mão. Recomendo muito.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">RM</span>
+              <span>
+                <cite>Ricardo Mendes</cite>
+                <small>Curitiba, PR</small>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="quote">
+            <div class="stars" role="img" aria-label="Avaliação 5 de 5">
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>
+              Precisei de guincho para minha caminhonete em dia de chuva. O atendente foi educado, me passou previsão de chegada e cumpriram direitinho. Serviço honesto e de qualidade.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">AC</span>
+              <span>
+                <cite>Ana Cristina</cite>
+                <small>São José dos Pinhais, PR</small>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="quote">
+            <div class="stars" role="img" aria-label="Avaliação 4,5 de 5">
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star"/></svg>
+              <svg aria-hidden="true"><use href="#i-star-half"/></svg>
+            </div>
+            <blockquote>
+              Já usei duas vezes: uma para troca de bateria e outra para remoção do carro. Nos dois atendimentos fui bem tratado e o preço foi justo. Já tenho o número salvo no celular.
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">FO</span>
+              <span>
+                <cite>Felipe Oliveira</cite>
+                <small>Pinhais, PR</small>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Chamada final ======================= -->
+    <section class="section cta" id="contato" aria-labelledby="cta-title">
+      <div class="container">
+        <span class="eyebrow">Fale conosco agora</span>
+        <h2 class="title" id="cta-title">Precisa de atendimento?<br>Estamos prontos.</h2>
+        <p class="lead">Não importa onde você está ou que horas são. Chame no WhatsApp ou ligue e receba atendimento imediato.</p>
+
+        <div class="cta__actions">
+          <a href="https://wa.me/5541988355326?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20atendimento." class="btn btn--wa" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Solicitar via WhatsApp
+          </a>
+          <a href="tel:+5541988355326" class="btn btn--white">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            Ligar agora
+          </a>
+          <a href="https://www.instagram.com/allonsimioni/" class="btn btn--ghost" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+            Ver no Instagram
+          </a>
+        </div>
+
+        <a href="tel:+5541988355326" class="cta__phone">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+          (41) 98835-5326
+        </a>
+        <p class="cta__note">Atendimento 24 horas, todos os dias</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= Rodapé ======================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#inicio" class="brand" aria-label="A Service Guincho, voltar ao início">
+            <img src="assets/img/logo.webp" alt="" width="200" height="167" loading="lazy">
+            <span class="brand__name">
+              A Service
+              <small>Guincho &amp; Assistência 24h</small>
+            </span>
+          </a>
+          <p class="footer__desc">Assistência veicular 24 horas com atendimento rápido, equipe especializada e preço justo para toda a região.</p>
+          <div class="socials">
+            <a href="https://wa.me/5541988355326?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20atendimento." target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            </a>
+            <a href="https://www.instagram.com/allonsimioni/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer__title">Serviços</h2>
+          <ul class="footer__list">
+            <li>Guincho 24h</li>
+            <li>Transporte de veículos</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer__title">Contato</h2>
+          <ul class="footer__list">
+            <li>
+              <a href="https://wa.me/5541988355326?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20atendimento." target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                (41) 98835-5326
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/allonsimioni/" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+                @allonsimioni
+              </a>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              São José dos Pinhais, PR
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+              24 horas, todos os dias
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__bottom">
+        &copy; <span id="ano">2026</span> A Service Guincho. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Atalhos de contato -->
+  <div class="mobile-bar" aria-label="Contato rápido">
+    <a href="tel:+5541988355326" class="btn btn--red">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+      Ligar agora
+    </a>
+    <a href="https://wa.me/5541988355326?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20atendimento." class="btn btn--wa" target="_blank" rel="noopener">
+      <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <a href="https://wa.me/5541988355326?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20atendimento." class="wa-float" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+    <span class="wa-float__label">Fale conosco agora!</span>
+    <span class="wa-float__btn">
+      <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    </span>
+  </a>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav__toggle');
+      var menu = document.getElementById('menu');
+
+      function setMenu(open) {
+        menu.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        setMenu(!menu.classList.contains('is-open'));
+      });
+
+      menu.addEventListener('click', function (event) {
+        if (event.target.closest('a')) setMenu(false);
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!event.target.closest('.nav')) setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setMenu(false);
+      });
+
+      var revealItems = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealItems.forEach(function (el) {
+          revealObserver.observe(el);
+        });
+
+        // Barra inferior no celular: aparece quando os botões do topo saem da tela
+        var bar = document.querySelector('.mobile-bar');
+        var heroActions = document.querySelector('.hero__actions');
+
+        new IntersectionObserver(function (entries) {
+          bar.classList.toggle('is-hidden', entries[0].isIntersecting);
+        }).observe(heroActions);
+      } else {
+        revealItems.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      }
+
+      document.getElementById('ano').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
